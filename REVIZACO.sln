@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37614.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "REVIZACO", "REVIZACO.vcxproj", "{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Debug|x64.ActiveCfg = Debug|x64
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Debug|x64.Build.0 = Debug|x64
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Debug|x86.ActiveCfg = Debug|Win32
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Debug|x86.Build.0 = Debug|Win32
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Release|x64.ActiveCfg = Release|x64
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Release|x64.Build.0 = Release|x64
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Release|x86.ActiveCfg = Release|Win32
+		{E8728AAF-C61B-424C-9F4E-AF8F2F75E9A9}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F12CDB81-5BAF-4BD6-8ECE-90155ACB1F3C}
+	EndGlobalSection
+EndGlobal
