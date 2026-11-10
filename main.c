@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include "time.h"
 
 void swap(int* x, int* y);
 void bubble(int* v, int n, int* comp, int* trocas);
@@ -14,6 +15,8 @@ void copiar_vetor(int* v, int* w, int n);
 void preencher_vetor(int* v, int n);
 
 int main() {
+	srand(time(NULL));
+
 	int n;
 
 	printf("Informe a quantidade de elementos do vetor: ");
@@ -27,10 +30,19 @@ int main() {
 	int* v = malloc(n * sizeof(*v));
 	if (v == NULL) return 1;
 
-	preencher_vetor(v, n);
+	if (n > 10) {
+		for (int i = 0; i < n; i++) {
+			v[i] = rand() % 100 + 1;
+		}
+	} else {
+		preencher_vetor(v, n);
+	}
 
 	int* v1 = malloc(n * sizeof(*v1));
-	if (v1 == NULL) return 1;
+	if (v1 == NULL) {
+		free(v);
+		return 1;
+	}
 
 	copiar_vetor(v, v1, n);
 
@@ -38,7 +50,11 @@ int main() {
 	bubble(v1, n, &b_comp, &b_trocas);
 
 	int* v2 = malloc(n * sizeof(*v2));
-	if (v2 == NULL) return 1;
+	if (v2 == NULL) {
+		free(v);
+		free(v1);
+		return 1;
+	}
 
 	copiar_vetor(v, v2, n);
 
@@ -46,7 +62,12 @@ int main() {
 	selection(v2, n, &s_comp, &s_trocas);
 
 	int* v3 = malloc(n * sizeof(*v3));
-	if (v3 == NULL) return 1;
+	if (v3 == NULL) {
+		free(v);
+		free(v1);
+		free(v2);
+		return 1;
+	}
 
 	copiar_vetor(v, v3, n);
 
@@ -115,7 +136,7 @@ void selection(int* v, int n, int* comp, int* trocas) {
 	for (int i = 0; i < n - 1; i++) {
 		int indice_menor = i;
 
-		for (int j = i; j < n; j++) {
+		for (int j = i + 1; j < n; j++) {
 			(*comp)++;
 			if (v[j] < v[indice_menor]) indice_menor = j;
 		}
